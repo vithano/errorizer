@@ -1,0 +1,40 @@
+{
+  "name": "@fullpower-stack/nextjs",
+  "private": true,
+  "scripts": {
+    "clean": "pnpm rimraf .next dist build ",
+    "build": "next build",
+    "dev": "next dev",
+    "test": "vitest run",
+    "test:ci": "start-server-and-test 'next start' http://127.0.0.1:3000 test:e2e",
+    "test:e2e": "playwright test",
+    "test:watch": "vitest",
+    "test:e2e:recorder": "playwright codegen",
+    "test:e2e:report": "playwright show-report",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/font": "13.1.0",
+    "@fullpower-stack/express-backend": "workspace:*",
+    "@fullpower-stack/ui": "workspace:*",
+    "@tanstack/react-query": "^4.13.0",
+    "@trpc/client": "^10.4.0",
+    "@trpc/next": "^10.7.0",
+    "@trpc/react-query": "^10.4.0",
+    "@trpc/server": "^10.4.0",
+    "@types/react-dom": "^18.0.10",
+    "next": "13.1.0",
+    "next-images": "^1.8.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "zod": "^3.19.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@fullpower-stack/eslint-config-custom": "workspace:*",
+    "@types/node": "^17.0.45",
+    "@types/react": "18.0.17",
+    "next-transpile-modules": "9.0.0"
+  }
+}
